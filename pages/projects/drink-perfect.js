@@ -1,0 +1,126 @@
+import { useEffect } from 'react'
+import Hero from '../../components/Hero'
+import Overview from '../../components/Overview'
+import ProblemAndSolution from '../../components/ProblemAndSolution'
+import FinalResult from '../../components/FinalResult'
+import Showcase from '../../components/Showcase'
+
+const DrinkPerfect = () => {
+  const signupImageHeight = 'min-h-[495px]'
+  const signupImageWidth = 'min-w-[278.52px]'
+  return (
+    <>
+      <Hero
+        alt="Drink Perfect mobile app"
+        src="/drink_perfect_hero2.jpg"
+      />
+      <Overview
+        details="Drink Perfect offered exclusive discounts at local bars and restaurants through their mobile app, but struggled to convert users. Several rounds of user testing were conducted and many iterations were designed to understand what kept users from completing sign-up. The design changes made a significant increase in user conversion."
+        timeline="6 x 2-Week Sprints"
+        skillsRows="skills:grid-rows-4"
+        skills={["User Research", "User Testing", "Competitive Research", "Hand Sketches", "Wireframes", "Interactive Prototypes", "Illustrations & Icons", "Style Guide"]}
+      />
+      <FinalResult
+        title="FINAL VALIDATION TESTING"
+        result="Users appreciated more context and information"
+        userStory="Final validation testing was conducted with 6 new participants, either in person or remotely via video chat. There were 3 main areas of focus to improve the redesign: sign up, premium info, and discount redemption."
+        asset="/drink_perfect_before_after.png"
+        assetHeight="h-[150px] sm:h-[200px] md:h-[300px] lg:h-[400px]"
+        assetWidth="w-[350px] sm:w-[500px] md:w-[700px] lg:w-[900px]"
+        assetAlt="table"
+        withBorder
+      />
+      <FinalResult
+        title="USER FLOW"
+        result="Diagrammed user path"
+        userStory="After discussing the important parts of the app and business needs, an outline of the user flow was created to understand the path and identify any points of friction."
+        asset="/drink_perfect_onboarding_flow_original.png"
+        assetHeight="h-[304px] md:h-[454px] lg:h-[654px]"
+        assetWidth="w-[375px] sm:w-[100%]"
+      />
+      <FinalResult
+        title="INITIAL USABILITY TESTING"
+        result="Users were frustrated with the UX, not just the UI of the original app"
+        userStory="User testing was conducted on the original design with 6 users to understand their needs and pain points. Based on the test results, 3 main problems guided the redesign: sign up, premium info, and discount redemption."
+        assetOne="/user_testing_1.png"
+        assetAltOne="user testing"
+        assetTwo="/user_testing_2.png"
+        assetAltTwo="user testing"
+        assetPair
+        assetHeight="h-[300px] sm:h-[200px] md:h-[300px]"
+        assetWidth="w-[300px] sm:w-[200px] md:w-[300px]"
+      />
+      <ProblemAndSolution
+        featureTitle="SIGN UP"
+        userProblem="Users signed up on the wrong screen"
+        problemDescription="Users struggled with creating an account. Every user mistakenly tried to create an account at the “Sign-In” screen, rather than the “Sign-Up” screen."
+        solution='New users were now introduced to the "Sign Up" screen, the UI was redesigned to be open and inviting, and the copy was written more concisely.'
+        beforePhoto="/sign_in_original.jpg"
+        afterPhoto="/sign_in_new.jpg"
+        alt="User sign up page"
+        beforeHeight="h-[550px]"
+        afterHeight="h-[550px]"
+      />
+      <Showcase
+        containerHeight="h-[495px]"
+        id="signup"
+        images={[
+          {
+            src: "/sign_in_original.jpg",
+            height: signupImageHeight,
+            width: signupImageWidth,
+          },
+          {
+            src: "/sign_up_2.png",
+            height: signupImageHeight,
+            width: signupImageWidth,
+          },
+          {
+            src: "/sign_up_3.png",
+            height: signupImageHeight,
+            width: signupImageWidth,
+          },
+          {
+            src: "/sign_up_4.png",
+            height: signupImageHeight,
+            width: signupImageWidth,
+          },
+          {
+            src: "/sign_in_new.jpg",
+            height: signupImageHeight,
+            width: signupImageWidth,
+          },
+        ]}
+      />
+      <ProblemAndSolution
+        featureTitle="PREMIUM INFO"
+        userProblem="Users did not understand the value of premium"
+        problemDescription="Users were forced to subscribe to the premium account and enter their credit card information, without enough time to explore the app. Users felt blindsided and distrusted Drink Perfect."
+        solution='I increased the number of premium subscriptions by clarifying premium benefits and highlighting the free trial.'
+        beforePhoto="/plan_review_original.jpg"
+        afterPhoto="/plan_review_new.jpg"
+        alt="Premium info"
+        beforeHeight="h-[550px]"
+        afterHeight="h-[680px]"
+      />
+      <ProblemAndSolution
+        featureTitle="DISCOUNT REDEMPTION"
+        userProblem="Users gave up when they failed to redeem a discount"
+        problemDescription="Users who tried to claim a discount could not because they didn’t have a premium account, but it was not explained. As a result, users repeatedly tried to redeem a discount, got frustrated, and gave up."
+        solution='I helped users achieve the “aha moment” by providing more context on the discount redemption.'
+        beforePhoto="/redeem_discount_original.jpg"
+        afterPhoto="/redeem_discount_new.jpg"
+        alt="Discount redemption"
+        beforeHeight="h-[550px]"
+        afterHeight="h-[550px]"
+      />
+      <FinalResult
+        result="I made onboarding easy so new users were happy to join"
+        userStory="I conducted final validation testing with 6 new participants, either in person or remotely via video chat. My changes made a significant increase in user conversion."
+        video={(<iframe src="https://player.vimeo.com/video/379932891?h=99abf67073" width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>)}
+      />
+    </>
+  )
+}
+
+export default DrinkPerfect;
