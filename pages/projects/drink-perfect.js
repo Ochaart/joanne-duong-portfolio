@@ -10,8 +10,8 @@ const DrinkPerfect = () => {
   const signupImageWidth = 'min-w-[278.52px]'
   const signupThumbHeight = 'min-h-[150px]'
   const signupThumbWidth = 'min-w-[75px]'
-  const signupShowcaseHeight = '594px'
-  const signupShowcaseWidth = '334.20px'
+  const signupShowcaseHeight = 'h-[594px]'
+  const signupShowcaseWidth = 'w-[334.20px]'
 
   return (
     <>
@@ -112,7 +112,7 @@ const DrinkPerfect = () => {
             width: signupImageWidth,
             thumbHeight: signupThumbHeight,
             thumbWidth: signupThumbWidth,
-            showcaseHeight: signupShowcaseHeight,
+            showcaseHeight: "h-[620px]",
             showcaseWidth: signupShowcaseWidth,
           },
         ]}

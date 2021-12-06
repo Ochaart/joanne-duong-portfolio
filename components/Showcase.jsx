@@ -3,7 +3,6 @@ import Image from 'next/image'
 import RightArrow from './icons/RightArrow'
 import LeftArrow from './icons/LeftArrow'
 import { useEffect, useState, useCallback } from 'react'
-import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 
 
 const Showcase = ({ id, images, containerHeight }) => {
@@ -137,19 +136,18 @@ const Showcase = ({ id, images, containerHeight }) => {
           {images.map((image, i) => (
             <div className="overflow-hidden" key={i}>
               {currentImage === i &&
-                <div id="displayedImage" onClick={(event) => event.stopPropagation()} className={`relative overflow-hidden`}>
+                <div id="displayedImage" onClick={(event) => event.stopPropagation()} className={`relative ${image.showcaseHeight} ${image.showcaseWidth} overflow-hidden`}>
                   {currentImage === i && <InnerImageZoom
                     src={image.src}
                     alt={image.alt}
-                    width={image.showcaseWidth}
-                    height={image.showcaseHeight}
+                    className="displayImage"
                     hideHint={true}
                   />}
                 </div>}
             </div>
           ))}
         </div>
-        <div className="flex mx-auto items-center gap-x-5 z-50 overflow-auto max-w-[465px] max-h-[25vh]">
+        <div className="flex mx-auto justify-center gap-x-5 mb-[5%] z-50 overflow-auto max-w-[465px] max-h-[25vh]">
           {images.map((image, i) => (
             <div key={i} onClick={(event) => updateSlide(event, i)} className={`relative ${currentImage === i ? "opacity-90" : ""} ${image.thumbHeight} ${image.thumbWidth}`}>
               <Image
