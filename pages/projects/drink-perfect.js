@@ -8,6 +8,11 @@ import Showcase from '../../components/Showcase'
 const DrinkPerfect = () => {
   const signupImageHeight = 'min-h-[495px]'
   const signupImageWidth = 'min-w-[278.52px]'
+  const signupThumbHeight = 'min-h-[150px]'
+  const signupThumbWidth = 'min-w-[75px]'
+  const signupShowcaseHeight = '594px'
+  const signupShowcaseWidth = '334.20px'
+
   return (
     <>
       <Hero
@@ -69,26 +74,46 @@ const DrinkPerfect = () => {
             src: "/sign_in_original.jpg",
             height: signupImageHeight,
             width: signupImageWidth,
+            thumbHeight: signupThumbHeight,
+            thumbWidth: signupThumbWidth,
+            showcaseHeight: signupShowcaseHeight,
+            showcaseWidth: signupShowcaseWidth,
           },
           {
             src: "/sign_up_2.png",
             height: signupImageHeight,
             width: signupImageWidth,
+            thumbHeight: signupThumbHeight,
+            thumbWidth: signupThumbWidth,
+            showcaseHeight: signupShowcaseHeight,
+            showcaseWidth: signupShowcaseWidth,
           },
           {
             src: "/sign_up_3.png",
             height: signupImageHeight,
             width: signupImageWidth,
+            thumbHeight: signupThumbHeight,
+            thumbWidth: signupThumbWidth,
+            showcaseHeight: signupShowcaseHeight,
+            showcaseWidth: signupShowcaseWidth,
           },
           {
             src: "/sign_up_4.png",
             height: signupImageHeight,
             width: signupImageWidth,
+            thumbHeight: signupThumbHeight,
+            thumbWidth: signupThumbWidth,
+            showcaseHeight: signupShowcaseHeight,
+            showcaseWidth: signupShowcaseWidth,
           },
           {
             src: "/sign_in_new.jpg",
             height: signupImageHeight,
             width: signupImageWidth,
+            thumbHeight: signupThumbHeight,
+            thumbWidth: signupThumbWidth,
+            showcaseHeight: signupShowcaseHeight,
+            showcaseWidth: signupShowcaseWidth,
           },
         ]}
       />
