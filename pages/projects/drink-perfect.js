@@ -6,12 +6,12 @@ import FinalResult from '../../components/FinalResult'
 import Showcase from '../../components/Showcase'
 
 const DrinkPerfect = () => {
-  const signupImageHeight = 'min-h-[495px]'
-  const signupImageWidth = 'min-w-[278.52px]'
-  const signupThumbHeight = 'min-h-[150px]'
-  const signupThumbWidth = 'min-w-[75px]'
-  const signupShowcaseHeight = 'h-[594px]'
-  const signupShowcaseWidth = 'w-[334.20px]'
+  const showcaseImageHeight = 'min-h-[495px]'
+  const showcaseImageWidth = 'min-w-[278.52px]'
+  const showcaseThumbHeight = 'min-h-[150px]'
+  const showcaseThumbWidth = 'min-w-[75px]'
+  const showcaseHeight = 'max-h-[594px]'
+  const showcaseWidth = 'max-w-[334.20px]'
 
   return (
     <>
@@ -60,60 +60,123 @@ const DrinkPerfect = () => {
         userProblem="Users signed up on the wrong screen"
         problemDescription="Users struggled with creating an account. Every user mistakenly tried to create an account at the “Sign-In” screen, rather than the “Sign-Up” screen."
         solution='New users were now introduced to the "Sign Up" screen, the UI was redesigned to be open and inviting, and the copy was written more concisely.'
-        beforePhoto="/sign_in_original.jpg"
-        afterPhoto="/sign_in_new.jpg"
+        beforePhoto="/sign_up_1_original.png"
+        afterPhoto="/sign_up_5.png"
         alt="User sign up page"
-        beforeHeight="h-[550px]"
-        afterHeight="h-[550px]"
+        beforeHeight="h-[533px]"
+        afterHeight="h-[533px]"
       />
       <Showcase
         containerHeight="h-[495px]"
         id="signup"
         images={[
           {
-            src: "/sign_in_original.jpg",
-            height: signupImageHeight,
-            width: signupImageWidth,
-            thumbHeight: signupThumbHeight,
-            thumbWidth: signupThumbWidth,
-            showcaseHeight: signupShowcaseHeight,
-            showcaseWidth: signupShowcaseWidth,
+            src: "/sign_up_1.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
           },
           {
             src: "/sign_up_2.png",
-            height: signupImageHeight,
-            width: signupImageWidth,
-            thumbHeight: signupThumbHeight,
-            thumbWidth: signupThumbWidth,
-            showcaseHeight: signupShowcaseHeight,
-            showcaseWidth: signupShowcaseWidth,
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
           },
           {
             src: "/sign_up_3.png",
-            height: signupImageHeight,
-            width: signupImageWidth,
-            thumbHeight: signupThumbHeight,
-            thumbWidth: signupThumbWidth,
-            showcaseHeight: signupShowcaseHeight,
-            showcaseWidth: signupShowcaseWidth,
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
           },
           {
             src: "/sign_up_4.png",
-            height: signupImageHeight,
-            width: signupImageWidth,
-            thumbHeight: signupThumbHeight,
-            thumbWidth: signupThumbWidth,
-            showcaseHeight: signupShowcaseHeight,
-            showcaseWidth: signupShowcaseWidth,
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
           },
           {
-            src: "/sign_in_new.jpg",
-            height: signupImageHeight,
-            width: signupImageWidth,
-            thumbHeight: signupThumbHeight,
-            thumbWidth: signupThumbWidth,
-            showcaseHeight: "h-[620px]",
-            showcaseWidth: signupShowcaseWidth,
+            src: "/sign_up_5.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
+          },
+        ]}
+      />
+      <ProblemAndSolution
+        featureTitle="DISCOUNT REDEMPTION"
+        userProblem="Users gave up when they failed to redeem a discount"
+        problemDescription="Users who tried to claim a discount could not because they didn’t have a premium account, but it was not explained. As a result, users repeatedly tried to redeem a discount, got frustrated, and gave up."
+        solution='I helped users achieve the “aha moment” by providing more context on the discount redemption.'
+        beforePhoto="/discount_redemption_1.png"
+        afterPhoto="/discount_redemption_5.png"
+        alt="Discount redemption"
+        beforeHeight="h-[533px]"
+        afterHeight="h-[662px]"
+        afterWidth="w-[373px]"
+      />
+      <Showcase
+        containerHeight="h-[495px]"
+        id="redemption"
+        images={[
+          {
+            src: "/discount_redemption_1.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
+          },
+          {
+            src: "/discount_redemption_2.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
+          },
+          {
+            src: "/discount_redemption_3.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
+          },
+          {
+            src: "/discount_redemption_4.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
+          },
+          {
+            src: "/discount_redemption_5.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
           },
         ]}
       />
@@ -122,22 +185,63 @@ const DrinkPerfect = () => {
         userProblem="Users did not understand the value of premium"
         problemDescription="Users were forced to subscribe to the premium account and enter their credit card information, without enough time to explore the app. Users felt blindsided and distrusted Drink Perfect."
         solution='I increased the number of premium subscriptions by clarifying premium benefits and highlighting the free trial.'
-        beforePhoto="/plan_review_original.jpg"
-        afterPhoto="/plan_review_new.jpg"
+        beforePhoto="/premium_info_1.png"
+        afterPhoto="/premium_info_5.png"
         alt="Premium info"
-        beforeHeight="h-[550px]"
-        afterHeight="h-[680px]"
+        beforeHeight="h-[533px]"
+        afterHeight="h-[844px]"
+        afterWidth="w-[375px]"
       />
-      <ProblemAndSolution
-        featureTitle="DISCOUNT REDEMPTION"
-        userProblem="Users gave up when they failed to redeem a discount"
-        problemDescription="Users who tried to claim a discount could not because they didn’t have a premium account, but it was not explained. As a result, users repeatedly tried to redeem a discount, got frustrated, and gave up."
-        solution='I helped users achieve the “aha moment” by providing more context on the discount redemption.'
-        beforePhoto="/redeem_discount_original.jpg"
-        afterPhoto="/redeem_discount_new.jpg"
-        alt="Discount redemption"
-        beforeHeight="h-[550px]"
-        afterHeight="h-[550px]"
+      <Showcase
+        containerHeight="h-[495px]"
+        id="premium"
+        images={[
+          {
+            src: "/premium_info_1.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
+          },
+          {
+            src: "/premium_info_2.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
+          },
+          {
+            src: "/premium_info_3.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
+          },
+          {
+            src: "/premium_info_4.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
+          },
+          {
+            src: "/premium_info_5.png",
+            height: "h-[600px]",
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: "h-[581px]",
+            showcaseWidth: "w-[257px]",
+          },
+        ]}
       />
       <FinalResult
         result="I made onboarding easy so new users were happy to join"

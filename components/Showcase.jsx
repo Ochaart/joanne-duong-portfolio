@@ -3,9 +3,10 @@ import Image from 'next/image'
 import RightArrow from './icons/RightArrow'
 import LeftArrow from './icons/LeftArrow'
 import { useEffect, useState, useCallback } from 'react'
+import cx from "classnames"
 
 
-const Showcase = ({ id, images, containerHeight }) => {
+const Showcase = ({ id, images = [], containerHeight, research, description, comparitiveResearch }) => {
   const [hasPreviousPhotos, setHasPreviousPhotos] = useState(false);
   const [hasNextPhotos, setHasNextPhotos] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -117,49 +118,71 @@ const Showcase = ({ id, images, containerHeight }) => {
 
   return (
     <section className="relative">
-      <h2 className="text-2xl pt-5 text-center">Showcased Design Progression</h2>
-      <div id={id} className={`mt-5 flex mx-auto ${containerHeight} max-w-[1450px] gap-x-3 overflow-auto overflow-x-hidden relative smoothScroll`}>
-        {images.map((image, i) => (
-          <button onClick={openModal} className={`relative ${image.height} ${image.width} border border-solid border-gray-300 cursor-pointer outline-none hover:border-gray-900`} key={i}>
-            <Image
-              src={image.src}
-              layout="fill"
-              alt={image.alt}
-            />
-          </button>
-        ))}
-      </div>
-      {hasPreviousPhotos && <button onClick={(event) => left(event)} className="absolute top-[49%] left-0 z-10 cursor-pointer "><LeftArrow width="50" height="50" /></button>}
-      {hasNextPhotos && <button onClick={(event) => right(event)} className="absolute top-[49%] right-0  z-10 cursor-pointer "><RightArrow width="50" height="50" /></button>}
-      {showModal && <div onClick={closeModal} className="w-[100vw] h-[100vh] fixed bg-opacity-[98%] top-0 left-0 bg-gray-900 z-50 gap-y-5">
-        <div className="relative flex flex-col justify-center items-center h-[75%] mt-[2%]">
-          {images.map((image, i) => (
-            <div className="overflow-hidden" key={i}>
-              {currentImage === i &&
-                <div id="displayedImage" onClick={(event) => event.stopPropagation()} className={`relative ${image.showcaseHeight} ${image.showcaseWidth} overflow-hidden`}>
-                  {currentImage === i && <InnerImageZoom
-                    src={image.src}
-                    alt={image.alt}
-                    className="displayImage"
-                    hideHint={true}
-                  />}
-                </div>}
-            </div>
-          ))}
+      {comparitiveResearch && (
+        <div className="px-8 mx-auto max-w-[760px] pt-36">
+          <h3>COMPARITIVE RESEARCH</h3>
+          <h2 className="text-4xl">{research}</h2>
+          <p className="text-lg">{description}</p>
         </div>
-        <div className="flex mx-auto justify-center gap-x-5 mb-[5%] z-50 overflow-auto max-w-[465px] max-h-[25vh]">
+      )}
+      {comparitiveResearch ? null : <h2 className="text-2xl pt-5 text-center">Showcased Design Progression</h2>}
+      <div className="relative">
+        {hasPreviousPhotos && <button onClick={(event) => left(event)} className={cx("absolute left-0 z-10 cursor-pointer", {
+          "top-[40%]": comparitiveResearch !== undefined,
+          "top-[45%]": comparitiveResearch === undefined,
+        })}><LeftArrow width="50" height="50" /></button>}
+        {hasNextPhotos && <button onClick={(event) => right(event)} className={cx("absolute right-0 z-10 cursor-pointer", {
+          "top-[40%]": comparitiveResearch !== undefined,
+          "top-[45%]": comparitiveResearch === undefined,
+        })}><RightArrow width="50" height="50" /></button>}
+        <div id={id} className={`mt-5 flex mx-auto ${containerHeight} max-w-[1450px] gap-x-3 overflow-auto overflow-x-hidden overflow-y-hidden h-auto relative smoothScroll`}>
           {images.map((image, i) => (
-            <div key={i} onClick={(event) => updateSlide(event, i)} className={`relative ${currentImage === i ? "opacity-90" : ""} ${image.thumbHeight} ${image.thumbWidth}`}>
+            <button onClick={openModal} className={`relative ${image.height} ${image.width} border border-solid border-gray-300 cursor-pointer outline-none hover:border-gray-900 self-start`} key={i}>
               <Image
                 src={image.src}
                 layout="fill"
                 alt={image.alt}
               />
-            </div>
+            </button>
           ))}
         </div>
-        <button onClick={(event) => prevSlide(event)} className="absolute top-[35%] left-10 z-10 cursor-pointer "><LeftArrow fill="white" width="50" height="50" /></button>
-        <button onClick={(event) => nextSlide(event)} className="absolute top-[35%] right-10  z-10 cursor-pointer "><RightArrow fill="white" width="50" height="50" /></button>
+      </div>
+      {showModal && <div onClick={closeModal} className="w-[100vw] h-[100vh] fixed bg-opacity-[98%] top-0 left-0 bg-gray-900 z-50 gap-y-5">
+        <div className="absolute grid grid-rows-4 row-start-1 row-end-4 justify-items-center items-center h-[100vh] w-[100vw] gap-y-5">
+          <div className="row-start-1 row-end-4 justify-center items-center h-auto mt-[2%]">
+            {images.map((image, i) => (
+              <div className="overflow-hidden" key={i}>
+                {currentImage === i &&
+                  <div id="displayedImage" onClick={(event) => event.stopPropagation()} className={`relative ${image.showcaseHeight} ${image.showcaseWidth} overflow-hidden`}>
+                    {currentImage === i && <InnerImageZoom
+                      src={image.src}
+                      alt={image.alt}
+                      className="displayImage"
+                      hideHint={true}
+                    />}
+                  </div>}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="grid grid-rows-4 justify-items-center items-center h-[100vh] gap-y-5 overflow-auto">
+          <div className={cx("self-end row-start-4 flex mx-auto gap-x-5 mb-[2%] z-50 min-w-[465px] max-h-[25vh]", {
+            "max-w-[465px]": comparitiveResearch === undefined,
+            "max-w-[800px]": comparitiveResearch !== undefined,
+          })}>
+            {images.map((image, i) => (
+              <div key={i} onClick={(event) => updateSlide(event, i)} className={`relative ${currentImage === i ? "opacity-90" : ""} ${image.thumbHeight} ${image.thumbWidth}`}>
+                <Image
+                  src={image.src}
+                  layout="fill"
+                  alt={image.alt}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        <button onClick={(event) => prevSlide(event)} className="hidden sm:block absolute top-[35%] left-10 z-10 cursor-pointer "><LeftArrow fill="white" width="50" height="50" /></button>
+        <button onClick={(event) => nextSlide(event)} className="hidden sm:block absolute top-[35%] right-10  z-10 cursor-pointer "><RightArrow fill="white" width="50" height="50" /></button>
       </div>}
     </section>
   )
