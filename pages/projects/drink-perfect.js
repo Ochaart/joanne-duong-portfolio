@@ -8,10 +8,10 @@ import Showcase from '../../components/Showcase'
 const DrinkPerfect = () => {
   const showcaseImageHeight = 'min-h-[495px]'
   const showcaseImageWidth = 'min-w-[278.52px]'
-  const showcaseThumbHeight = 'min-h-[150px]'
+  const showcaseThumbHeight = 'h-[14vh]'
   const showcaseThumbWidth = 'min-w-[75px]'
-  const showcaseHeight = 'max-h-[594px]'
-  const showcaseWidth = 'max-w-[334.20px]'
+  const showcaseHeight = 'h-[80vh]'
+  const showcaseWidth = 'w-auto'
 
   return (
     <>
@@ -238,8 +238,8 @@ const DrinkPerfect = () => {
             width: showcaseImageWidth,
             thumbHeight: showcaseThumbHeight,
             thumbWidth: showcaseThumbWidth,
-            showcaseHeight: "h-[581px]",
-            showcaseWidth: "w-[257px]",
+            showcaseHeight: showcaseHeight,
+            showcaseWidth: showcaseWidth,
           },
         ]}
       />

@@ -9,8 +9,8 @@ const Catch = () => {
   const showcaseImageWidth = 'min-w-[278.65px]'
   const showcaseThumbHeight = 'min-h-[96px]'
   const showcaseThumbWidth = 'min-w-[154.80px]'
-  const showcaseHeight = 'h-[75%]'
-  const showcaseWidth = 'w-full'
+  const showcaseHeight = 'h-auto'
+  const showcaseWidth = 'w-[40vw]'
 
   return (
     <section>
