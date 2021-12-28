@@ -41,7 +41,7 @@ const HappyQuest = () => {
       />
       <Overview
         details="There are many mental-wellness apps on the market, but I wanted to understand what really hooked users. It was a humbling experience to design an MVP for a positivity app from zero. While most existing apps looked and functioned the same, my insights from competitive research and user testing revealed that unique visuals and digestible content resulted in a more engaging experience."
-        timeline="3 Months"
+        timeline="6 x 2-Week Sprints"
         skillsRows="skills:grid-rows-4"
         skills={["User Research", "User Testing", "Competitive Research", "Hand Sketches", "Wireframes", "Interactive Prototypes", "Illustrations & Icons", "Design System"]}
       />

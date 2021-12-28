@@ -22,12 +22,13 @@ const Catch = () => {
       />
       <Overview
         details="Catch offered store credit at online retailers through their integrated-checkout payment. Before my design, new users were referred by existing users via gifted credits, but did not convert on the web portal. I conducted user research and designed many iterations to understand what kept referred users from completing account set up. My designs made a significant increase in user conversion."
-        timeline="2 Months"
+        timeline="4 x 2-Week Sprints"
         skillsRows="skills:grid-rows-3"
         skills={["User Research", "User Testing", "Competitive Research", "Hand Sketches", "Wireframes", "Interactive Prototypes"]}
       />
       <Showcase
         comparitiveResearch
+        layout="web"
         containerHeight="h-[174.16px]"
         research="Reviewed payment and rewards apps"
         description="To understand current solutions for users, comparable payment and rewards apps were researched such as Gyft, Klarna, Paypal, Starbucks, and Venmo."

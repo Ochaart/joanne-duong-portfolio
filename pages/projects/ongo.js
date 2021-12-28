@@ -12,7 +12,7 @@ const Ongo = () => (
     />
     <Overview
       details="Ongo was a health and fitness app in beta, but planned to launch their product and needed a new landing page. I conducted several rounds of user testing and designed many iterations to understand what users looked for in order to download an app. Scanability, calls to action, and trust, were invaluable to designing a landing page in which users converted."
-      timeline="2 Months"
+      timeline="4 x 2-Week Sprints"
       skillsRows="skills:grid-rows-3"
       skills={["User Research", "User Testing", "Competitive Research", "Hand Sketches", "Wireframes", "High-Fidellity Mockups"]}
     />
