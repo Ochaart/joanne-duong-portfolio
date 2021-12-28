@@ -6,7 +6,7 @@ import { useEffect, useState, useCallback } from 'react'
 import cx from "classnames"
 import X from './icons/X'
 
-const Showcase = ({ id, images = [], containerHeight, research, description, comparitiveResearch }) => {
+const Showcase = ({ id, images = [], containerHeight, research, description, comparitiveResearch, layout = "default" }) => {
   const [hasPreviousPhotos, setHasPreviousPhotos] = useState(false);
   const [hasNextPhotos, setHasNextPhotos] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -130,21 +130,21 @@ const Showcase = ({ id, images = [], containerHeight, research, description, com
   return (
     <section className="relative">
       {comparitiveResearch && (
-        <div className="px-8 mx-auto max-w-[760px] pt-36">
+        <div className="px-8 mx-auto max-w-[760px] pt-36 pb-6">
           <h3>COMPARITIVE RESEARCH</h3>
-          <h2 className="text-4xl">{research}</h2>
-          <p className="text-lg">{description}</p>
+          <h2 className="text-4xl pt-2">{research}</h2>
+          <p className="text-lg pt-3">{description}</p>
         </div>
       )}
-      {comparitiveResearch ? null : <h2 className="text-2xl pt-5 text-center">Showcased Design Progression</h2>}
+      {comparitiveResearch ? null : <h2 className="text-2xl pt-5 px-8 text-center">Showcased Design Progression</h2>}
       <div className="relative">
         {hasPreviousPhotos && <button onClick={(event) => left(event)} className={cx("absolute left-0 z-10 cursor-pointer", {
-          "top-[40%]": comparitiveResearch !== undefined,
-          "top-[45%]": comparitiveResearch === undefined,
+          "top-[38%]": layout === "web",
+          "top-[45%]": layout === "default",
         })}><LeftArrow width="50" height="50" /></button>}
         {hasNextPhotos && <button onClick={(event) => right(event)} className={cx("absolute right-0 z-10 cursor-pointer", {
-          "top-[40%]": comparitiveResearch !== undefined,
-          "top-[45%]": comparitiveResearch === undefined,
+          "top-[38%]": layout === "web",
+          "top-[45%]": layout === "default",
         })}><RightArrow width="50" height="50" /></button>}
         <div id={id} className={`mt-5 flex mx-auto ${containerHeight} max-w-[1450px] gap-x-3 overflow-auto overflow-x-hidden overflow-y-hidden h-auto relative smoothScroll`}>
           {images.map((image, i) => (
@@ -159,17 +159,18 @@ const Showcase = ({ id, images = [], containerHeight, research, description, com
         </div>
       </div>
       {showModal && <div className="w-[100vw] h-[100vh] fixed bg-opacity-[98%] top-0 left-0 bg-gray-900 z-50 gap-y-5">
-        <div className="mb-[1vh] flex justify-center items-center" style={{ height: displayHeight }}>
+        <div className="mb-[1vh] sm:mt-[3vh] flex justify-center items-center" style={{ height: displayHeight }}>
           {images.map((image, i) => (
             <div key={i}>
               {currentImage === i &&
-                <div id="displayedImage" onClick={(event) => event.stopPropagation()} className={`relative`} style={{ height: image.showcaseHeight, width: image.showcaseWidth }}>
+                <div id="displayedImage" onClick={(event) => event.stopPropagation()} className={cx(image.showcaseWidthTailwind)} style={{ height: image.showcaseHeight, width: image.showcaseWidth }}>
                   {currentImage === i && <InnerImageZoom
                     src={image.src}
                     alt={image.alt}
                     className="displayImage"
                     hideHint={true}
                     moveType="drag"
+                    fullscreenOnMobile="true"
                   />}
                 </div>}
             </div>
@@ -177,8 +178,8 @@ const Showcase = ({ id, images = [], containerHeight, research, description, com
         </div>
         <div className="overflow-x-auto" style={{ height: thumbContainerHeight }}>
           <div className={cx("flex mx-auto gap-x-5 z-50 items-center", {
-            "w-[456px]": comparitiveResearch === undefined,
-            "w-[853px]": comparitiveResearch !== undefined,
+            "w-[456px]": layout === "default",
+            "w-[853px]": layout === "web",
           })} style={{ height: thumbHeight }}>
             {images.map((image, i) => (
               <div key={i} onClick={(event) => updateSlide(event, i)} className={`relative cursor-pointer ${currentImage === i ? "opacity-90" : ""} ${image.thumbWidth}`} style={{height: image.thumbHeight}}>

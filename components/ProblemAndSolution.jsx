@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const ProblemAndSolution = ({ isWebb, imageMargins = "", featureTitle, userProblem, problemDescription, solution, before = 'Before', after = 'After', beforePhoto, afterPhoto, alt, beforeHeight, afterHeight, beforeWidth = "w-[300px]", afterWidth="w-[300px]" }) => (
   <section className={`px-8 mx-auto max-w-[760px] pt-36`}>
-    <div className="flex flex-col gap-y-5 items-center">
+    <div className="flex flex-col gap-y-5 items-start">
       <div>
         <h3>{featureTitle}</h3>
         <h2 className="text-3xl sm:text-4xl mt-1">{userProblem}</h2>

@@ -10,7 +10,6 @@ const DrinkPerfect = () => {
   const [showcaseHeight, setShowcaseHeight] = useState('80vh')
   const [showcaseThumbHeight, setShowcaseThumbHeight] = useState('14vh')
   const [showcaseWidth, setShowcaseWidth] = useState('auto')
-
   const showcaseImageHeight = 'min-h-[495px]'
   const showcaseImageWidth = 'min-w-[278.52px]'
   const showcaseThumbWidth = 'min-w-[75px]'

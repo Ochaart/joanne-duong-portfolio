@@ -7,10 +7,11 @@ import Showcase from '../../components/Showcase'
 const Catch = () => {
   const showcaseImageHeight = 'min-h-[174.16px]'
   const showcaseImageWidth = 'min-w-[278.65px]'
-  const showcaseThumbHeight = 'min-h-[96px]'
+  const showcaseThumbHeight = '96px'
   const showcaseThumbWidth = 'min-w-[154.80px]'
-  const showcaseHeight = 'h-auto'
-  const showcaseWidth = 'w-[100vw] sm:w-[72vw]'
+  const showcaseHeight = 'auto'
+  const showcaseWidth = ''
+  const showcaseWidthTailwind = "w-[100vw] sm:w-[76vw]"
 
   return (
     <>
@@ -39,7 +40,7 @@ const Catch = () => {
             thumbHeight: showcaseThumbHeight,
             thumbWidth: showcaseThumbWidth,
             showcaseHeight: showcaseHeight,
-            showcaseWidth: showcaseWidth,
+            showcaseWidthTailwind,
           },
           {
             src: "/comp_research_klarna.png",
@@ -48,7 +49,7 @@ const Catch = () => {
             thumbHeight: showcaseThumbHeight,
             thumbWidth: showcaseThumbWidth,
             showcaseHeight: showcaseHeight,
-            showcaseWidth: showcaseWidth,
+            showcaseWidthTailwind,
           },
           {
             src: "/comp_research_paypal.png",
@@ -57,7 +58,7 @@ const Catch = () => {
             thumbHeight: showcaseThumbHeight,
             thumbWidth: showcaseThumbWidth,
             showcaseHeight: showcaseHeight,
-            showcaseWidth: showcaseWidth,
+            showcaseWidthTailwind,
           },
           {
             src: "/comp_research_starbucks.png",
@@ -66,7 +67,7 @@ const Catch = () => {
             thumbHeight: showcaseThumbHeight,
             thumbWidth: showcaseThumbWidth,
             showcaseHeight: showcaseHeight,
-            showcaseWidth: showcaseWidth,
+            showcaseWidthTailwind,
           },
           {
             src: "/comp_research_venmo.png",
@@ -75,9 +76,18 @@ const Catch = () => {
             thumbHeight: showcaseThumbHeight,
             thumbWidth: showcaseThumbWidth,
             showcaseHeight: showcaseHeight,
-            showcaseWidth: showcaseWidth,
+            showcaseWidthTailwind,
           },
         ]}
+      />
+      <FinalResult
+        title="CARD SORT"
+        result="Outlined user navigation"
+        userStory="After determining the critical parts of the web portal and business needs, an outline was created to list and organize elements to be included."
+        asset="/user_web_portal_outline.png"
+        assetHeight="h-[100vw] md:h-[849.26px]"
+        assetWidth="w-[90vw] md:w-[716px]"
+        assetAlt="table"
       />
       <ProblemAndSolution
         featureTitle="USER LOG IN"
@@ -86,15 +96,67 @@ const Catch = () => {
         solution='I designed an easy and clear web portal login screen with a “how it works” overview.'
         before="Wireframe"
         after="Final"
-        beforePhoto="/user_login_wireframe.jpg"
-        afterPhoto="/user_login_final.jpg"
+        beforePhoto="/user_log_in_1.png"
+        afterPhoto="/user_log_in_5.png"
         alt="User login page"
         isWebb
         imageMargins="-mx-8 lg:mx-[-20%]"
-        beforeWidth="w-full lg:w-[340px] xl:w-[440px] 2xl:w-[540px]"
-        afterWidth="w-full lg:w-[520px] xl:w-[620px] 2xl:w-[720px]"
-        beforeHeight="h-[260px] sm:h-[324px] xl:h-[280px] 2xl:h-[340px]"
-        afterHeight="h-[280px] sm:h-[364px] xl:h-[424px] 2xl:h-[524px]"
+        beforeWidth="w-[80vw] lg:w-[340px] xl:w-[440px] 2xl:w-[540px]"
+        afterWidth="w-[80vw] lg:w-[520px] xl:w-[620px] 2xl:w-[720px]"
+        beforeHeight="h-[60vw] lg:h-[244px] xl:h-[280px] 2xl:h-[338px]"
+        afterHeight="h-[60vw] lg:h-[290px] xl:h-[390px] 2xl:h-[450px]"
+      />
+      <Showcase
+        containerHeight="h-[174.16px]"
+        id="user_log_in"
+        layout="web"
+        images={[
+          {
+            src: "/user_log_in_1.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+          {
+            src: "/user_log_in_2.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+          {
+            src: "/user_log_in_3.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+          {
+            src: "/user_log_in_4.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+          {
+            src: "/user_log_in_5.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+        ]}
       />
       <ProblemAndSolution
         featureTitle="CONNECT BANK ACCOUNT"
@@ -103,15 +165,67 @@ const Catch = () => {
         solution='I removed the "connect bank account" originally introduced in the flow, designed a natural flow for users to explore first, showed where and why it was important, and gave many opportunities for users to connect their bank account later. An example of this is on the home screen of the web portal.'
         before="Wireframe"
         after="Final"
-        beforePhoto="/connect_bank_wireframe.jpg"
-        afterPhoto="/connect_bank_final.jpg"
+        beforePhoto="/connect_bank_account_1.png"
+        afterPhoto="/connect_bank_account_5.png"
         alt="Connect bank account page"
         isWebb
         imageMargins="-mx-8 lg:mx-[-20%]"
-        beforeWidth="w-full lg:w-[340px] xl:w-[440px] 2xl:w-[540px]"
-        afterWidth="w-full lg:w-[520px] xl:w-[620px] 2xl:w-[720px]"
-        beforeHeight="h-[260px] sm:h-[324px] xl:h-[280px] 2xl:h-[340px]"
-        afterHeight="h-[280px] sm:h-[364px] xl:h-[390px] 2xl:h-[450px]"
+        beforeWidth="w-[80vw] lg:w-[340px] xl:w-[440px] 2xl:w-[540px]"
+        afterWidth="w-[80vw] lg:w-[520px] xl:w-[620px] 2xl:w-[720px]"
+        beforeHeight="h-[60vw] lg:h-[244px] xl:h-[280px] 2xl:h-[338px]"
+        afterHeight="h-[60vw] lg:h-[290px] xl:h-[390px] 2xl:h-[450px]"
+      />
+      <Showcase
+        containerHeight="h-[174.16px]"
+        id="connect_bank_account"
+        layout="web"
+        images={[
+          {
+            src: "/connect_bank_account_1.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+          {
+            src: "/connect_bank_account_2.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+          {
+            src: "/connect_bank_account_3.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+          {
+            src: "/connect_bank_account_4.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+          {
+            src: "/connect_bank_account_5.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+        ]}
       />
       <ProblemAndSolution
         featureTitle="SHOP STORES"
@@ -120,15 +234,67 @@ const Catch = () => {
         solution='I designed a “Shop Stores” page to show online retail partners where users could earn store credit when paid with Catch. With a limited number of partners, I also designed the grid in a more visually appealing mixed-collage format.'
         before="Wireframe"
         after="Final"
-        beforePhoto="/shop_stores_wireframe.jpg"
-        afterPhoto="/shop_stores_final.jpg"
+        beforePhoto="/shop_stores_1.png"
+        afterPhoto="/shop_stores_5.png"
         alt="Shop stores page"
         isWebb
         imageMargins="-mx-8 lg:mx-[-20%]"
-        beforeWidth="w-full lg:w-[340px] xl:w-[440px] 2xl:w-[540px]"
-        afterWidth="w-full lg:w-[520px] xl:w-[620px] 2xl:w-[720px]"
-        beforeHeight="h-[260px] sm:h-[324px] xl:h-[280px] 2xl:h-[340px]"
-        afterHeight="h-[280px] sm:h-[390px] xl:h-[460px] 2xl:h-[520px]"
+        beforeWidth="w-[80vw] lg:w-[340px] xl:w-[440px] 2xl:w-[540px]"
+        afterWidth="w-[80vw] lg:w-[520px] xl:w-[620px] 2xl:w-[720px]"
+        beforeHeight="h-[60vw] lg:h-[244px] xl:h-[280px] 2xl:h-[338px]"
+        afterHeight="h-[60vw] lg:h-[290px] xl:h-[390px] 2xl:h-[450px]"
+      />
+      <Showcase
+        containerHeight="h-[174.16px]"
+        id="shop_stores"
+        layout="web"
+        images={[
+          {
+            src: "/shop_stores_1.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+          {
+            src: "/shop_stores_2.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+          {
+            src: "/shop_stores_3.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+          {
+            src: "/shop_stores_4.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+          {
+            src: "/shop_stores_5.png",
+            height: showcaseImageHeight,
+            width: showcaseImageWidth,
+            thumbHeight: showcaseThumbHeight,
+            thumbWidth: showcaseThumbWidth,
+            showcaseHeight: showcaseHeight,
+            showcaseWidthTailwind,
+          },
+        ]}
       />
       <FinalResult
         result="I made an easy-to-use web portal so referred users were happy to shop and earn with Catch"
