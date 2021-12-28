@@ -85,8 +85,8 @@ const Catch = () => {
         result="Outlined user navigation"
         userStory="After determining the critical parts of the web portal and business needs, an outline was created to list and organize elements to be included."
         asset="/user_web_portal_outline.png"
-        assetHeight="h-[100vw] md:h-[849.26px]"
-        assetWidth="w-[90vw] md:w-[716px]"
+        assetHeight="h-[120vw] md:h-[819.26px]"
+        assetWidth="w-[100vw] md:w-[695px]"
         assetAlt="table"
       />
       <ProblemAndSolution

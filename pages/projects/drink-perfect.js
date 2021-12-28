@@ -254,7 +254,7 @@ const DrinkPerfect = () => {
           },
           {
             src: "/premium_info_5.png",
-            height: showcaseImageHeight,
+            height: "h-[600px]",
             width: showcaseImageWidth,
             thumbHeight: showcaseThumbHeight,
             thumbWidth: showcaseThumbWidth,

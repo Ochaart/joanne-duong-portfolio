@@ -130,7 +130,7 @@ const Showcase = ({ id, images = [], containerHeight, research, description, com
   return (
     <section className="relative">
       {comparitiveResearch && (
-        <div className="px-8 mx-auto max-w-[760px] pt-36 pb-6">
+        <div className="px-8 mx-auto max-w-[760px] pt-28 pb-6">
           <h3>COMPARITIVE RESEARCH</h3>
           <h2 className="text-4xl pt-2">{research}</h2>
           <p className="text-lg pt-3">{description}</p>
