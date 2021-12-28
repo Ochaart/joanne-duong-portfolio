@@ -12,6 +12,10 @@ body {
   width: 100%;
 }
 
+body {
+  display: block;
+}
+
 h2 {
   font-family: Merriweather;
 }

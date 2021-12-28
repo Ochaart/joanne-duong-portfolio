@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Hero from '../../components/Hero'
 import Overview from '../../components/Overview'
 import ProblemAndSolution from '../../components/ProblemAndSolution'
@@ -6,12 +6,33 @@ import FinalResult from '../../components/FinalResult'
 import Showcase from '../../components/Showcase'
 
 const DrinkPerfect = () => {
+
+  const [showcaseHeight, setShowcaseHeight] = useState('80vh')
+  const [showcaseThumbHeight, setShowcaseThumbHeight] = useState('14vh')
+  const [showcaseWidth, setShowcaseWidth] = useState('auto')
+
   const showcaseImageHeight = 'min-h-[495px]'
   const showcaseImageWidth = 'min-w-[278.52px]'
-  const showcaseThumbHeight = 'h-[14vh]'
   const showcaseThumbWidth = 'min-w-[75px]'
-  const showcaseHeight = 'h-[80vh]'
-  const showcaseWidth = 'w-auto'
+
+  const updateHeights = () => {
+    setShowcaseHeight((window.innerHeight * .8) + 'px')
+    setShowcaseThumbHeight((window.innerHeight * .14) + 'px')
+    setShowcaseWidth((window.innerHeight * .8 / 1.996) + 'px')
+  }
+
+  useEffect(() => {
+    let unmounted = false;
+    setTimeout(() => {
+      if (!unmounted) {
+        window.addEventListener('resize', updateHeights);
+      }
+    }, 50);
+    return () => {
+      unmounted = true;
+      window.removeEventListener('resize', updateHeights);
+    };
+  }, []);
 
   return (
     <>

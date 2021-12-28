@@ -10,10 +10,10 @@ const Catch = () => {
   const showcaseThumbHeight = 'min-h-[96px]'
   const showcaseThumbWidth = 'min-w-[154.80px]'
   const showcaseHeight = 'h-auto'
-  const showcaseWidth = 'w-[100vw] sm:w-[80vw]'
+  const showcaseWidth = 'w-[100vw] sm:w-[72vw]'
 
   return (
-    <section>
+    <>
       <Hero
         alt="Catch web app"
         src="/catch_hero.jpg"
@@ -29,11 +29,11 @@ const Catch = () => {
         comparitiveResearch
         containerHeight="h-[174.16px]"
         research="Reviewed payment and rewards apps"
-        description="To understand current solutions for users, comparable payment and rewards apps were researched such as Gyft, Paypal, Express, Starbucks, and Venmo."
+        description="To understand current solutions for users, comparable payment and rewards apps were researched such as Gyft, Klarna, Paypal, Starbucks, and Venmo."
         id="catchResearch"
         images={[
           {
-            src: "/express_rewards_web.png",
+            src: "/comp_research_gyft.png",
             height: showcaseImageHeight,
             width: showcaseImageWidth,
             thumbHeight: showcaseThumbHeight,
@@ -42,7 +42,7 @@ const Catch = () => {
             showcaseWidth: showcaseWidth,
           },
           {
-            src: "/gyft_web.png",
+            src: "/comp_research_klarna.png",
             height: showcaseImageHeight,
             width: showcaseImageWidth,
             thumbHeight: showcaseThumbHeight,
@@ -51,7 +51,7 @@ const Catch = () => {
             showcaseWidth: showcaseWidth,
           },
           {
-            src: "/paypal_web.png",
+            src: "/comp_research_paypal.png",
             height: showcaseImageHeight,
             width: showcaseImageWidth,
             thumbHeight: showcaseThumbHeight,
@@ -60,7 +60,7 @@ const Catch = () => {
             showcaseWidth: showcaseWidth,
           },
           {
-            src: "/starbucks_web.png",
+            src: "/comp_research_starbucks.png",
             height: showcaseImageHeight,
             width: showcaseImageWidth,
             thumbHeight: showcaseThumbHeight,
@@ -69,7 +69,7 @@ const Catch = () => {
             showcaseWidth: showcaseWidth,
           },
           {
-            src: "/venmo_web.png",
+            src: "/comp_research_venmo.png",
             height: showcaseImageHeight,
             width: showcaseImageWidth,
             thumbHeight: showcaseThumbHeight,
@@ -135,7 +135,7 @@ const Catch = () => {
         userStory="Referred users wanted to understand what Catch was, freely browse and explore, then choose to link their bank account and shop later. I focused on ease of navigation and context to help users stay engaged and take action."
         video={(<iframe src="https://player.vimeo.com/video/590394185?h=c86669499a" width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>)}
       />
-    </section>
+    </>
   )
 }
 
