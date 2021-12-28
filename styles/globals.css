@@ -65,6 +65,7 @@ button {
   display: inline-block;
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
+  margin: 0 auto;
 }
 
 .iiz--drag .iiz__zoom-img--visible {
@@ -79,6 +80,8 @@ button {
   pointer-events: none;
   visibility: visible;
   opacity: 1;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 .iiz__img--hidden {

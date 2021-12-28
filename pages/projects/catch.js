@@ -10,7 +10,7 @@ const Catch = () => {
   const showcaseThumbHeight = 'min-h-[96px]'
   const showcaseThumbWidth = 'min-w-[154.80px]'
   const showcaseHeight = 'h-auto'
-  const showcaseWidth = 'w-[40vw]'
+  const showcaseWidth = 'w-[100vw] sm:w-[80vw]'
 
   return (
     <section>
