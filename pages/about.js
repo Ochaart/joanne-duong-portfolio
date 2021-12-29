@@ -9,9 +9,9 @@ const About = () => {
 
   return (
     <AnimateOpacity>
-      <section className="flex flex-col-reverse lg:grid lg:grid-cols-2 mx-auto lg:px-28 pb-16 pt-20 sm:pt-28 items-center gap-y-8">
+      <section className="flex flex-col-reverse lg:grid lg:grid-cols-2 mx-auto lg:px-28 pb-16 pt-20 sm:pt-28 items-center">
         <div className="flex flex-col gap-y-5 px-10">
-          <div className="font-montserrat text-base xl:text-xl">HI THERE!</div>
+          <div className="font-montserrat text-base xl:text-xl pt-8 lg:pt-0">HI THERE!</div>
           <div className="font-merriweather text-2xl xl:text-3xl">I&apos;m Joanne Duong</div>
           <p className="text-base xl:text-xl">
             I&apos;m a product designer based in San Francisco. I&apos;m originally from Seattle, but moved to SF after my first solo trip to Central America. I love traveling the world and bring my global perspective to my work. I get excited about designing which makes life easier so that we have more time to do what’s important: connect in real life.
