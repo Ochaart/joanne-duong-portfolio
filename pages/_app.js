@@ -8,7 +8,7 @@ import NavModal from '../components/NavModal';
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import AnimateOpacity from '../components/AnimateOpacity'
-import { menuVariants } from '../variants/menu_variants'
+import { menuVariants } from '../variants/variants'
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);

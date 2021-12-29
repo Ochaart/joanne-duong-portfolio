@@ -1,6 +1,6 @@
 import ReactDom from 'react-dom'
 import { motion } from 'framer-motion'
-import { menuVariants } from '../variants/menu_variants';
+import { menuVariants } from '../variants/variants';
 import { useState, useEffect, forwardRef, useImperativeHandle } from 'react'
 
 const NavModal = forwardRef(({ children, overlayStyles, contentStyles }, ref) => {

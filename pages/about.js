@@ -1,7 +1,12 @@
 import Image from 'next/image';
 import AnimateOpacity from '../components/AnimateOpacity'
+import useModuleInView from '../hooks/useModuleInView'
+import { motion } from 'framer-motion'
+import { moduleVariants } from '../variants/variants'
 
 const About = () => {
+  const { module: refDanceModule, controls: danceModuleControls } = useModuleInView();
+
   return (
     <AnimateOpacity>
       <section className="flex flex-col-reverse lg:grid lg:grid-cols-2 mx-auto lg:px-28 h-full py-16 lg:pt-28 items-center gap-y-8">
@@ -25,7 +30,12 @@ const About = () => {
           />
         </div>
       </section>
-      <section className="flex flex-col mb-28 lg:grid lg:grid-cols-2 mx-auto px-8 lg:px-28 justify-items-center justify-center items-center gap-y-8">
+      <motion.section
+      ref={refDanceModule}
+      initial="initial"
+      animate={danceModuleControls}
+      variants={moduleVariants}
+      className="flex flex-col mb-28 lg:grid lg:grid-cols-2 mx-auto px-8 lg:px-28 justify-items-center justify-center items-center gap-y-8">
         <div className="relative w-[347.21px] h-[252.52px] sm:w-[458.33px] sm:h-[333.33px] md:w-[550px] md:h-[400px] xl:w-[660px] xl:h-[480px]">
           <Image
             src="/joanne_dancing.jpg"
@@ -50,7 +60,7 @@ const About = () => {
             </li>
           </ul>
         </div>
-      </section>
+      </motion.section>
     </AnimateOpacity>
   )
 }

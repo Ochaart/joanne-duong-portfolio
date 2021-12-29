@@ -3,8 +3,13 @@ import Project from '../components/Project';
 import classNames from 'classnames'
 import styles from '../styles/Home.module.css';
 import AnimateOpacity from '../components/AnimateOpacity'
+import useModuleInView from '../hooks/useModuleInView'
+import { motion } from 'framer-motion'
+import { moduleVariants } from '../variants/variants'
 
 export default function Home() {
+  const { module: refProjectsModule, controls: projectsModuleControls } = useModuleInView();
+
   return (
     <AnimateOpacity>
       <div className="flex flex-col">
@@ -16,7 +21,12 @@ export default function Home() {
             Designing to achieve greater user conversion
           </h2>
         </section>
-        <section className="relative pb-28">
+        <motion.section
+          ref={refProjectsModule}
+          initial="initial"
+          animate={projectsModuleControls}
+          variants={moduleVariants}
+          className="relative pb-28">
           <h2 className="mx-auto px-10 md:px-24 text-2xl md:text-3xl mb-6">Completed Work:</h2>
           <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 auto-rows-max gap-x-24 gap-y-24 justify-items-center px-10 md:px-24">
             <Project
@@ -52,7 +62,7 @@ export default function Home() {
               objectPosition="0% 0%"
             />
           </div>
-        </section>
+        </motion.section>
       </div>
     </AnimateOpacity>
   )
