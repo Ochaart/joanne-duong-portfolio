@@ -4,6 +4,7 @@ import ProblemAndSolution from '../../components/ProblemAndSolution'
 import FinalResult from '../../components/FinalResult'
 import Showcase from '../../components/Showcase'
 import ProjectNavigation from '../../components/ProjectNavigation'
+import AnimateOpacity from '../../components/AnimateOpacity'
 
 const Ongo = () => {
   const showcaseImageHeight = 'min-h-[206.92px]'
@@ -22,7 +23,7 @@ const Ongo = () => {
   const sketchWidthTailwind = "w-[80vw] lg:w-[60vw]"
 
   return (
-    <>
+    <AnimateOpacity>
       <Hero
         alt="Ongo web app"
         src="/ongo_hero.jpg"
@@ -299,7 +300,7 @@ const Ongo = () => {
         assetAlt="Landing page asset"
       />
       <ProjectNavigation project="ongo" />
-    </>
+    </AnimateOpacity>
   )
 }
 

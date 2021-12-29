@@ -5,6 +5,7 @@ import ProblemAndSolution from '../../components/ProblemAndSolution'
 import FinalResult from '../../components/FinalResult'
 import Showcase from '../../components/Showcase'
 import ProjectNavigation from '../../components/ProjectNavigation'
+import AnimateOpacity from '../../components/AnimateOpacity'
 
 const HappyQuest = () => {
   const [showcaseHeight, setShowcaseHeight] = useState('80vh')
@@ -34,7 +35,7 @@ const HappyQuest = () => {
   }, []);
 
   return (
-    <>
+    <AnimateOpacity>
       <Hero
         alt="Happy Quest web app"
         src="/happy_quest_hero.jpg"
@@ -344,7 +345,7 @@ const HappyQuest = () => {
         video={(<iframe src="https://player.vimeo.com/video/449097289?h=9a58f66313" width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>)}
       />
        <ProjectNavigation project="happyQuest" />
-    </>
+    </AnimateOpacity>
   )
 }
 

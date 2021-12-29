@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import AnimateOpacity from '../components/AnimateOpacity'
 
 const About = () => {
   return (
-    <div>
+    <AnimateOpacity>
       <section className="flex flex-col-reverse lg:grid lg:grid-cols-2 mx-auto lg:px-28 h-full py-16 lg:pt-28 items-center gap-y-8">
         <div className="flex flex-col gap-y-5 px-10">
           <div className="font-montserrat text-base xl:text-xl">HI THERE!</div>
@@ -50,7 +51,7 @@ const About = () => {
           </ul>
         </div>
       </section>
-    </div>
+    </AnimateOpacity>
   )
 }
 

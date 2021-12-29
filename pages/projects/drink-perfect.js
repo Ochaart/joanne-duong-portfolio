@@ -5,6 +5,7 @@ import ProblemAndSolution from '../../components/ProblemAndSolution'
 import FinalResult from '../../components/FinalResult'
 import Showcase from '../../components/Showcase'
 import ProjectNavigation from '../../components/ProjectNavigation'
+import AnimateOpacity from '../../components/AnimateOpacity'
 
 const DrinkPerfect = () => {
 
@@ -35,7 +36,7 @@ const DrinkPerfect = () => {
   }, []);
 
   return (
-    <>
+    <AnimateOpacity>
       <Hero
         alt="Drink Perfect mobile app"
         src="/drink_perfect_hero2.jpg"
@@ -270,7 +271,7 @@ const DrinkPerfect = () => {
         video={(<iframe src="https://player.vimeo.com/video/379932891?h=99abf67073" width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>)}
       />
        <ProjectNavigation project="drinkPerfect" />
-    </>
+    </AnimateOpacity>
   )
 }
 

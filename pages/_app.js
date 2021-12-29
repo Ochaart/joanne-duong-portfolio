@@ -7,6 +7,7 @@ import { useRef, useContext, useEffect, useState } from 'react'
 import NavModal from '../components/NavModal';
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import AnimateOpacity from '../components/AnimateOpacity'
 import { menuVariants } from '../variants/menu_variants'
 
 function MyApp({ Component, pageProps }) {
@@ -41,7 +42,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {loading ? <div className="w-[100vw] h-[100vh] flex items-center justify-center"><HashLoader color="#1B3F79" loading={loading} size={150} /></div> : <div onClick={closeModal}>
+      {loading ? <AnimateOpacity><div className="w-[100vw] h-[100vh] flex items-center justify-center"><HashLoader color="#1B3F79" loading={loading} size={150} /></div></AnimateOpacity> : <div onClick={closeModal}>
         <Navigation openModal={openModal} toggleModal={toggleModal} />
         <Component {...pageProps} />
         <FooterNavigation />

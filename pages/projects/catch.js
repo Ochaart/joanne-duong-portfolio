@@ -4,6 +4,7 @@ import ProblemAndSolution from '../../components/ProblemAndSolution'
 import FinalResult from '../../components/FinalResult'
 import Showcase from '../../components/Showcase'
 import ProjectNavigation from '../../components/ProjectNavigation'
+import AnimateOpacity from '../../components/AnimateOpacity'
 
 const Catch = () => {
   const showcaseImageHeight = 'min-h-[174.16px]'
@@ -15,7 +16,7 @@ const Catch = () => {
   const showcaseWidthTailwind = "w-[100vw] sm:w-[76vw]"
 
   return (
-    <>
+    <AnimateOpacity>
       <Hero
         alt="Catch web app"
         src="/catch_hero.jpg"
@@ -304,7 +305,7 @@ const Catch = () => {
         video={(<iframe src="https://player.vimeo.com/video/590394185?h=c86669499a" width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>)}
       />
        <ProjectNavigation project="catch" />
-    </>
+    </AnimateOpacity>
   )
 }
 
