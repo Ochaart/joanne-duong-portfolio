@@ -5,7 +5,6 @@ import LeftArrow from './icons/LeftArrow'
 import { useEffect, useState, useCallback } from 'react'
 import cx from "classnames"
 import X from './icons/X'
-import AnimateOpacity from './AnimateOpacity'
 import { motion, AnimatePresence } from "framer-motion"
 
 const Showcase = ({ id, images = [], containerHeight, research, description, task, layout = "default" }) => {
@@ -164,16 +163,17 @@ const Showcase = ({ id, images = [], containerHeight, research, description, tas
           ))}
         </div>
       </div>
-      {showModal && <AnimateOpacity><div className="w-[100vw] h-[100vh] fixed bg-opacity-[98%] top-0 left-0 bg-gray-900 z-50 gap-y-5">
+      {showModal && <div className="w-[100vw] h-[100vh] fixed bg-opacity-[98%] top-0 left-0 bg-gray-900 z-50 gap-y-5">
         <div className="mb-[1vh] sm:mt-[3vh] flex justify-center items-center" style={{ height: displayHeight }}>
           {images.map((image, i) => (
             <div key={i}>
               {currentImage === i &&
                 <AnimatePresence>
                   <motion.div
-                    initial={{ opacity: 0, x: -50 }}
+                    initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 50 }}
+                    exit={{ opacity: 0, x: 30 }}
+                    transition={{ duration: .5 }}
                     id="displayedImage"
                     onClick={(event) => event.stopPropagation()}
                     className={cx(image.showcaseWidthTailwind)}
@@ -192,29 +192,35 @@ const Showcase = ({ id, images = [], containerHeight, research, description, tas
             </div>
           ))}
         </div>
-        <div className="overflow-x-auto" style={{ height: thumbContainerHeight }}>
-          <div className={cx("flex mx-auto gap-x-5 z-50 items-center", {
-            "w-[456px]": layout === "default",
-            "w-[853px]": layout === "web",
-            "w-[360px]": layout === "sketches",
-          })} style={{ height: thumbHeight }}>
-            {images.map((image, i) => (
-              <div key={i} onClick={(event) => updateSlide(event, i)} className={`relative cursor-pointer ${currentImage === i ? "opacity-90" : ""} ${image.thumbWidth}`} style={{ height: image.thumbHeight }}>
-                <Image
-                  src={image.src}
-                  layout="fill"
-                  alt={image.alt}
-                  priority
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ delay: .5, duration: .5 }}
+            className="overflow-x-auto" style={{ height: thumbContainerHeight }}>
+            <div className={cx("flex mx-auto gap-x-5 z-50 items-center", {
+              "w-[456px]": layout === "default",
+              "w-[853px]": layout === "web",
+              "w-[360px]": layout === "sketches",
+            })} style={{ height: thumbHeight }}>
+              {images.map((image, i) => (
+                <div key={i} onClick={(event) => updateSlide(event, i)} className={`relative cursor-pointer ${currentImage === i ? "opacity-90" : ""} ${image.thumbWidth}`} style={{ height: image.thumbHeight }}>
+                  <Image
+                    src={image.src}
+                    layout="fill"
+                    alt={image.alt}
+                    priority
+                  />
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </AnimatePresence>
         <button onClick={(event) => prevSlide(event)} className="hidden sm:flex justify-center items-center h-[80vh] w-[90px] absolute top-0 left-0 z-10 cursor-pointer "><LeftArrow fill="white" width="30" height="30" /></button>
         <button onClick={(event) => nextSlide(event)} className="hidden sm:flex justify-center items-center h-[80vh] w-[90px] absolute top-0 right-0 z-10 cursor-pointer "><RightArrow fill="white" width="30" height="30" /></button>
         <button onClick={() => closeModal()} className="absolute right-0 sm:right-5 top-0 z-10 cursor-pointer h-[50px] w-[50px] flex items-center justify-center"><X className="h-[20px] w-[20px] stroke-2" /></button>
-      </div>
-      </AnimateOpacity>}
+      </div>}
     </section >
   )
 }
