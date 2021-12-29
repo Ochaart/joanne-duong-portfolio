@@ -29,15 +29,6 @@ function MyApp({ Component, pageProps }) {
   }
 
   useEffect(() => {
-    setLoading(true);
-    window.addEventListener('load', function () {
-      console.log('loaded')
-      setLoading(false);
-    })
-    return () => window.removeEventListener('load', function () { setLoading(false) })
-  }, [])
-
-  useEffect(() => {
     router.events.on("routeChangeError", (e) => setLoading(true));
     router.events.on("routeChangeStart", (e) => setLoading(true));
     router.events.on("routeChangeComplete", (e) => setLoading(false));
@@ -51,8 +42,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {loading && <AnimateOpacity><div className="w-[100vw] h-[100vh] flex items-center justify-center fixed bg-white z-50"><HashLoader color="#1B3F79" loading={loading} size={150} /></div></AnimateOpacity>}
-      <div className="relative" onClick={closeModal}>
+      {loading ? <AnimateOpacity><div className="w-[100vw] h-[100vh] flex items-center justify-center"><HashLoader color="#1B3F79" loading={loading} size={150} /></div></AnimateOpacity> : <div onClick={closeModal}>
         <Navigation openModal={openModal} toggleModal={toggleModal} />
         <Component {...pageProps} />
         <FooterNavigation />
@@ -75,7 +65,7 @@ function MyApp({ Component, pageProps }) {
             </li>
           </motion.ul>
         </NavModal>
-      </div>
+      </div>}
     </>
 
   )
