@@ -31,11 +31,11 @@ const About = () => {
         </div>
       </section>
       <motion.section
-      ref={refDanceModule}
-      initial="initial"
-      animate={danceModuleControls}
-      variants={moduleVariants}
-      className="flex flex-col mb-28 lg:grid lg:grid-cols-2 mx-auto px-8 lg:px-28 justify-items-center justify-center items-center gap-y-8">
+        ref={refDanceModule}
+        initial="initial"
+        animate={danceModuleControls}
+        variants={moduleVariants}
+        className="flex flex-col mb-28 lg:grid lg:grid-cols-2 mx-auto px-8 lg:px-28 justify-items-center justify-center items-center gap-y-8">
         <div className="relative w-[347.21px] h-[252.52px] sm:w-[458.33px] sm:h-[333.33px] md:w-[550px] md:h-[400px] xl:w-[660px] xl:h-[480px]">
           <Image
             src="/joanne_dancing.jpg"

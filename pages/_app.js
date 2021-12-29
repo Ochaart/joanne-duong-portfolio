@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {loading && <AnimateOpacity><div className="w-[100vw] h-[100vh] flex items-center justify-center fixed bg-white z-50"><HashLoader color="#1B3F79" loading={loading} size={150} /></div></AnimateOpacity>}
-      <div onClick={closeModal}>
+      <div className="relative" onClick={closeModal}>
         <Navigation openModal={openModal} toggleModal={toggleModal} />
         <Component {...pageProps} />
         <FooterNavigation />
