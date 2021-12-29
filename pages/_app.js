@@ -11,7 +11,7 @@ import AnimateOpacity from '../components/AnimateOpacity'
 import { menuVariants } from '../variants/variants'
 
 function MyApp({ Component, pageProps }) {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const router = useRouter();
 
   const modalRef = useRef();
@@ -27,6 +27,12 @@ function MyApp({ Component, pageProps }) {
   const toggleModal = () => {
     modalRef.current.toggleModal();
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000);
+  }, [])
 
   useEffect(() => {
     router.events.on("routeChangeError", (e) => setLoading(true));
