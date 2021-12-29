@@ -16,6 +16,7 @@ const Navigation = ({ openModal, toggleModal }) => {
                 src='/shopping_bag.svg'
                 alt='Logo'
                 layout='fill'
+                priority
               />
             </div>
             Joanne Duong
@@ -30,6 +31,7 @@ const Navigation = ({ openModal, toggleModal }) => {
           src='/hamburger_menu.svg'
           alt='Menu button'
           layout='fill'
+          priority
         />
       </button>
       <ul className="hidden text-gray-500 font-montserrat lg:flex lg:flex-row lg:justify-end col-start-3 text-2xl">

@@ -20,6 +20,7 @@ const About = () => {
             layout="fill"
             alt="Joanne with a bike in a sunny urban neighborhood"
             objectFit="contain"
+            priority
           />
         </div>
       </section>
@@ -31,6 +32,7 @@ const About = () => {
             alt="Joanne in a hip-hop dance perfomance"
             objectFit="contain"
             objectPosition="0"
+            priority
           />
         </div>
         <div className="flex flex-col gap-y-8 lg:px-20">

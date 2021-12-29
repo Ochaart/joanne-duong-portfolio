@@ -156,6 +156,7 @@ const Showcase = ({ id, images = [], containerHeight, research, description, tas
                 src={image.src}
                 layout="fill"
                 alt={image.alt}
+                priority
               />
             </button>
           ))}
@@ -191,6 +192,7 @@ const Showcase = ({ id, images = [], containerHeight, research, description, tas
                   src={image.src}
                   layout="fill"
                   alt={image.alt}
+                  priority
                 />
               </div>
             ))}

@@ -21,6 +21,7 @@ const FinalResult = ({ assetPair, assetPairClassName = "sm:grid-cols-2 gap-x-10"
             src={asset}
             layout="fill"
             alt={assetAlt}
+            priority
           />
         </div>
       )}
@@ -31,6 +32,7 @@ const FinalResult = ({ assetPair, assetPairClassName = "sm:grid-cols-2 gap-x-10"
               src={assetOne}
               layout="fill"
               alt={assetAltOne}
+              priority
             />
           </div>
           <div className={`relative self-center mt-8 ${assetWidth} ${assetHeight} ${assetMargins} ${withBorder ? "border border-solid border-gray-300" : ""}`}>
@@ -38,6 +40,7 @@ const FinalResult = ({ assetPair, assetPairClassName = "sm:grid-cols-2 gap-x-10"
               src={assetTwo}
               layout="fill"
               alt={assetAltTwo}
+              priority
             />
           </div>
         </div>

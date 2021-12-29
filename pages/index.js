@@ -21,6 +21,7 @@ export default function Home() {
               alt="Joanne Duong"
               layout="fill"
               objectFit="cover"
+              priority
             />
           </div>
       </section>

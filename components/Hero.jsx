@@ -9,6 +9,7 @@ const Hero = ({ src, title, alt }) => (
         objectFit="cover"
         objectPosition="0 0"
         alt={alt}
+        priority
       />
     </div>
   </section>

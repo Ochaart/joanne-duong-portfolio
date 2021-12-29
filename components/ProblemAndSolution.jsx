@@ -25,6 +25,7 @@ const ProblemAndSolution = ({ isWebb, goalOrSolution = "SOLUTION", userProblemDe
               layout="fill"
               alt={`${before} ${alt}`}
               objectFit="contain"
+              priority
             />
           </div>
         </div>
@@ -36,6 +37,7 @@ const ProblemAndSolution = ({ isWebb, goalOrSolution = "SOLUTION", userProblemDe
               layout="fill"
               alt={`${after} ${alt}`}
               objectFit="contain"
+              priority
             />
           </div>
         </div>
