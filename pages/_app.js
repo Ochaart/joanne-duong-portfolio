@@ -1,4 +1,4 @@
-import ClipLoader from "react-spinners/ClipLoader";
+import HashLoader from "react-spinners/HashLoader";
 import { useRouter } from "next/router";
 import '../styles/globals.css'
 import Navigation from '../components/Navigation';
@@ -27,16 +27,6 @@ function MyApp({ Component, pageProps }) {
     modalRef.current.toggleModal();
   }
 
-  // useEffect(() => {
-  //   window.addEventListener('load', () => {
-  //     setLoading(false);
-  //   })
-  //   console.log('loaded')
-  //   return () => window.removeEventListener('load', () => {
-  //     setLoading(false);
-  //   })
-  // }, [])
-
   useEffect(() => {
     router.events.on("routeChangeError", (e) => setLoading(true));
     router.events.on("routeChangeStart", (e) => setLoading(true));
@@ -51,7 +41,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {loading ? <div className="w-[100vw] h-[100vh] flex items-center justify-center"><ClipLoader color="#1B3F79" loading={loading} size={150} /></div> : <div onClick={closeModal}>
+      {loading ? <div className="w-[100vw] h-[100vh] flex items-center justify-center"><HashLoader color="#1B3F79" loading={loading} size={150} /></div> : <div onClick={closeModal}>
         <Navigation openModal={openModal} toggleModal={toggleModal} />
         <Component {...pageProps} />
         <FooterNavigation />
@@ -63,8 +53,8 @@ function MyApp({ Component, pageProps }) {
             className="text-white font-montserrat flex flex-col text-2xl h-[100%] px-10 justify-center space-y-4"
           >
             <li>
-              <Link href="/#projects">
-                <a className="hover:text-gray-500">PROJECTS</a>
+              <Link href="/">
+                <a className="hover:text-gray-500">HOME</a>
               </Link>
             </li>
             <li>

@@ -36,8 +36,8 @@ const Navigation = ({ openModal, toggleModal }) => {
       </button>
       <ul className="hidden text-gray-500 font-montserrat lg:flex lg:flex-row lg:justify-end col-start-3 text-2xl">
         <li>
-          <Link href="/#projects">
-            <a className="hover:text-black">PROJECTS</a>
+          <Link href="/">
+            <a className="hover:text-black">HOME</a>
           </Link>
         </li>
         <li className="ml-10">

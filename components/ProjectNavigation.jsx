@@ -14,7 +14,7 @@ const ProjectNavigation = ({ project }) => {
   return (
     <div>
       <ul className="grid grid-cols-3 justify-items-center whitespace-nowrap gap-y-5 md:flex w-[100vw] px-8 justify-evenly items-center md:gap-x-10 font-montserrat text-xs md:text-sm text-[#555555] py-32">
-        <li><Link href="/#projects"><a className="hover:text-gray-900">All</a></Link></li>
+        <li><Link href="/"><a className="hover:text-gray-900">All</a></Link></li>
         <li><Link href="/projects/drink-perfect"><a className={cx({ "hover:text-gray-900": project !== "drinkPerfect", "text-gray-900 font-bold text-base": project === "drinkPerfect" })}>Drink Perfect</a></Link></li>
         <li><Link href="/projects/catch"><a className={cx({ "hover:text-gray-900": project !== "catch", "text-gray-900 font-bold text-base": project === "catch" })}>Catch</a></Link></li>
         <li><Link href="/projects/happy-quest"><a className={cx({ "hover:text-gray-900": project !== "happyQuest", "text-gray-900 font-bold text-base": project === "happyQuest" })}>Happy Quest</a></Link></li>

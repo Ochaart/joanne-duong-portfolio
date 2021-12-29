@@ -24,8 +24,8 @@ const About = () => {
           />
         </div>
       </section>
-      <section className="flex flex-col lg:grid lg:grid-cols-2 mx-auto px-8 lg:px-28 h-[450px] sm:h-[650px] items-center gap-y-8">
-        <div className="relative min-w-[320px] lg:min-h-[400px] lg:min-w-[550px] h-4/6 w-5/6 lg:h-5/6 lg:w-6/6 justify-self-center">
+      <section className="flex flex-col mb-28 lg:grid lg:grid-cols-2 mx-auto px-8 lg:px-28 justify-items-center justify-center items-center gap-y-8">
+        <div className="relative w-[347.21px] h-[252.52px] sm:w-[458.33px] sm:h-[333.33px] md:w-[550px] md:h-[400px] xl:w-[660px] xl:h-[480px]">
           <Image
             src="/joanne_dancing.jpg"
             layout="fill"
