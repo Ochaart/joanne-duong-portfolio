@@ -12,7 +12,6 @@ const Project = ({ title, objectPosition, description, maxWidth, image, href, al
         layout="fill"
         objectFit="cover"
         objectPosition={objectPosition}
-        priority
       />
     </div>
     <h3 className=" text-sm md:text2xl mt-2">{title}</h3>
