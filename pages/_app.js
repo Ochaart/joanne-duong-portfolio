@@ -1,8 +1,7 @@
 import '../styles/globals.css'
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import FooterNavigation from '../components/FooterNavigation';
-import { useRef, useContext } from 'react'
+import { useRef, useContext, useEffect } from 'react'
 import NavModal from '../components/NavModal';
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -23,11 +22,16 @@ function MyApp({ Component, pageProps }) {
     modalRef.current.toggleModal();
   }
 
+  useEffect(() => {
+    window.addEventListener('load', () => {
+      console.log('loaded');
+    })
+  }, [])
+
   return (
     <div onClick={closeModal}>
       <Navigation openModal={openModal} toggleModal={toggleModal} />
       <Component {...pageProps} />
-      <Footer />
       <FooterNavigation />
       <NavModal
         ref={modalRef}

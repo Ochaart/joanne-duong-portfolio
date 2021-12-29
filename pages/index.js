@@ -24,7 +24,7 @@ export default function Home() {
             />
           </div>
       </section>
-      <section className="relative pt-28 -mt-28" id="projects">
+      <section className="relative py-28 -mt-28" id="projects">
         <h2 className="mx-auto px-10 md:px-24 text-2xl md:text-3xl mb-6">Completed Work:</h2>
         <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 auto-rows-max gap-x-24 gap-y-24 justify-items-center px-10 md:px-24">
           <Project

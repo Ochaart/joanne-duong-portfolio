@@ -17,6 +17,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-inner-image-zoom": "^2.1.0",
+    "react-spinners": "^0.11.0",
     "tailwindcss": "^2.2.17"
   },
   "devDependencies": {

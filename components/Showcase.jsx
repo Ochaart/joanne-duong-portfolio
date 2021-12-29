@@ -6,7 +6,7 @@ import { useEffect, useState, useCallback } from 'react'
 import cx from "classnames"
 import X from './icons/X'
 
-const Showcase = ({ id, images = [], containerHeight, research, description, comparitiveResearch, layout = "default" }) => {
+const Showcase = ({ id, images = [], containerHeight, research, description, task, layout = "default" }) => {
   const [hasPreviousPhotos, setHasPreviousPhotos] = useState(false);
   const [hasNextPhotos, setHasNextPhotos] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -15,6 +15,7 @@ const Showcase = ({ id, images = [], containerHeight, research, description, com
   const [thumbContainerHeight, setThumbContainerHeight] = useState('20vh');
   const [thumbHeight, setThumbHeight] = useState('16vh');
   const length = images.length;
+  const movement = layout === "default" || layout === "web" ? 279 : 351;
 
   const nextSlide = (event) => {
     event.stopPropagation();
@@ -99,8 +100,8 @@ const Showcase = ({ id, images = [], containerHeight, research, description, com
     event.stopPropagation();
     event.preventDefault();
     const silder = document.getElementById(id);
-    silder.scrollLeft -= 279;
-    if (silder.scrollLeft < 558) {
+    silder.scrollLeft -= movement;
+    if (silder.scrollLeft < movement * 2) {
       silder.scrollLeft = 0;
       setHasNextPhotos(true);
       setHasPreviousPhotos(false);
@@ -114,9 +115,9 @@ const Showcase = ({ id, images = [], containerHeight, research, description, com
     event.stopPropagation();
     event.preventDefault();
     const silder = document.getElementById(id);
-    silder.scrollLeft += 279;
+    silder.scrollLeft += movement;
     if (
-      silder.scrollLeft > silder.scrollWidth - silder.clientWidth - 558
+      silder.scrollLeft > silder.scrollWidth - silder.clientWidth - movement * 2
     ) {
       silder.scrollLeft = silder.scrollWidth;
       setHasNextPhotos(false);
@@ -129,24 +130,26 @@ const Showcase = ({ id, images = [], containerHeight, research, description, com
 
   return (
     <section className="relative">
-      {comparitiveResearch && (
+      {task && (
         <div className="px-8 mx-auto max-w-[760px] pt-28 pb-6">
-          <h3>COMPARITIVE RESEARCH</h3>
+          <h3>{task}</h3>
           <h2 className="text-4xl pt-2">{research}</h2>
           <p className="text-lg pt-3">{description}</p>
         </div>
       )}
-      {comparitiveResearch ? null : <h2 className="text-2xl pt-5 px-8 text-center">Showcased Design Progression</h2>}
+      {task ? null : <h2 className="text-2xl pt-5 px-8 text-center">Showcased Design Progression</h2>}
       <div className="relative">
-        {hasPreviousPhotos && <button onClick={(event) => left(event)} className={cx("absolute left-0 z-10 cursor-pointer", {
+        {hasPreviousPhotos && <button onClick={(event) => left(event)} className={cx("hidden md:block absolute left-0 z-10 cursor-pointer", {
           "top-[38%]": layout === "web",
           "top-[45%]": layout === "default",
+          "top-[48%]": layout === "sketches",
         })}><LeftArrow width="50" height="50" /></button>}
-        {hasNextPhotos && <button onClick={(event) => right(event)} className={cx("absolute right-0 z-10 cursor-pointer", {
+        {hasNextPhotos && <button onClick={(event) => right(event)} className={cx("hidden md:block absolute right-0 z-10 cursor-pointer", {
           "top-[38%]": layout === "web",
           "top-[45%]": layout === "default",
+          "top-[48%]": layout === "sketches",
         })}><RightArrow width="50" height="50" /></button>}
-        <div id={id} className={`mt-5 flex mx-auto ${containerHeight} max-w-[1450px] gap-x-3 overflow-auto overflow-x-hidden overflow-y-hidden h-auto relative smoothScroll`}>
+        <div id={id} className={`mt-5 flex mx-auto ${containerHeight} max-w-[1450px] gap-x-3 overflow-auto md:overflow-x-hidden overflow-y-hidden h-auto relative smoothScroll`}>
           {images.map((image, i) => (
             <button onClick={openModal} className={`relative ${image.height} ${image.width} border border-solid border-gray-300 cursor-pointer outline-none hover:border-gray-900 self-start`} key={i}>
               <Image
@@ -170,7 +173,7 @@ const Showcase = ({ id, images = [], containerHeight, research, description, com
                     className="displayImage"
                     hideHint={true}
                     moveType="drag"
-                    fullscreenOnMobile="true"
+                    fullscreenOnMobile={true}
                   />}
                 </div>}
             </div>
@@ -180,6 +183,7 @@ const Showcase = ({ id, images = [], containerHeight, research, description, com
           <div className={cx("flex mx-auto gap-x-5 z-50 items-center", {
             "w-[456px]": layout === "default",
             "w-[853px]": layout === "web",
+            "w-[360px]": layout === "sketches",
           })} style={{ height: thumbHeight }}>
             {images.map((image, i) => (
               <div key={i} onClick={(event) => updateSlide(event, i)} className={`relative cursor-pointer ${currentImage === i ? "opacity-90" : ""} ${image.thumbWidth}`} style={{height: image.thumbHeight}}>

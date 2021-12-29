@@ -1,6 +1,6 @@
 const Overview = ({ details, timeline, skills = [], skillsRows }) => (
   <section className="mx-auto px-8 max-w-[760px] lg:mt-16">
-    <div className="flex flex-col gap-y-2">
+    <div className="flex flex-col gap-y-2 pt-4">
       <h3>OVERVIEW</h3>
       <p className="text-lg">{details}</p>
     </div>

@@ -4,6 +4,7 @@ import Overview from '../../components/Overview'
 import ProblemAndSolution from '../../components/ProblemAndSolution'
 import FinalResult from '../../components/FinalResult'
 import Showcase from '../../components/Showcase'
+import ProjectNavigation from '../../components/ProjectNavigation'
 
 const DrinkPerfect = () => {
 
@@ -268,6 +269,7 @@ const DrinkPerfect = () => {
         userStory="I conducted final validation testing with 6 new participants, either in person or remotely via video chat. My changes made a significant increase in user conversion."
         video={(<iframe src="https://player.vimeo.com/video/379932891?h=99abf67073" width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>)}
       />
+       <ProjectNavigation project="drinkPerfect" />
     </>
   )
 }

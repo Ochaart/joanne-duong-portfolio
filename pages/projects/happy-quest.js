@@ -4,6 +4,7 @@ import Overview from '../../components/Overview'
 import ProblemAndSolution from '../../components/ProblemAndSolution'
 import FinalResult from '../../components/FinalResult'
 import Showcase from '../../components/Showcase'
+import ProjectNavigation from '../../components/ProjectNavigation'
 
 const HappyQuest = () => {
   const [showcaseHeight, setShowcaseHeight] = useState('80vh')
@@ -46,7 +47,7 @@ const HappyQuest = () => {
         skills={["User Research", "User Testing", "Competitive Research", "Hand Sketches", "Wireframes", "Interactive Prototypes", "Illustrations & Icons", "Design System"]}
       />
       <Showcase
-        comparitiveResearch
+        task="COMPARITIVE RESEARCH"
         containerHeight="h-[572.74px]"
         research="Reviewed positivity apps"
         description="A total of 5 positivity apps (365 Gratitude, Happify, Youper, Replika and Delightful) were researched to understand current solutions for users. To guide the design direction, pros and cons were documented as well as the general feeling left by the apps: boredom, frustration, and unaccomplishment."
@@ -342,6 +343,7 @@ const HappyQuest = () => {
         userStory="New users wanted to browse and explore the new app, often clicking through different sections. I focused on ease of navigation and context to help users flow through the app."
         video={(<iframe src="https://player.vimeo.com/video/449097289?h=9a58f66313" width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>)}
       />
+       <ProjectNavigation project="happyQuest" />
     </>
   )
 }

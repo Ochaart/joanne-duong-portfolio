@@ -3,6 +3,7 @@ import Overview from '../../components/Overview'
 import ProblemAndSolution from '../../components/ProblemAndSolution'
 import FinalResult from '../../components/FinalResult'
 import Showcase from '../../components/Showcase'
+import ProjectNavigation from '../../components/ProjectNavigation'
 
 const Catch = () => {
   const showcaseImageHeight = 'min-h-[174.16px]'
@@ -27,7 +28,7 @@ const Catch = () => {
         skills={["User Research", "User Testing", "Competitive Research", "Hand Sketches", "Wireframes", "Interactive Prototypes"]}
       />
       <Showcase
-        comparitiveResearch
+        task="COMPARITIVE RESEARCH"
         layout="web"
         containerHeight="h-[174.16px]"
         research="Reviewed payment and rewards apps"
@@ -302,6 +303,7 @@ const Catch = () => {
         userStory="Referred users wanted to understand what Catch was, freely browse and explore, then choose to link their bank account and shop later. I focused on ease of navigation and context to help users stay engaged and take action."
         video={(<iframe src="https://player.vimeo.com/video/590394185?h=c86669499a" width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>)}
       />
+       <ProjectNavigation project="catch" />
     </>
   )
 }
