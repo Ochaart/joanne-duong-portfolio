@@ -8,8 +8,6 @@ import { motion } from 'framer-motion'
 import { moduleVariants } from '../variants/variants'
 
 export default function Home() {
-  const { module: refProjectsModule, controls: projectsModuleControls } = useModuleInView();
-
   return (
     <AnimateOpacity>
       <div className="flex flex-col">
@@ -22,9 +20,8 @@ export default function Home() {
           </h2>
         </section>
         <motion.section
-          ref={refProjectsModule}
           initial="initial"
-          animate={projectsModuleControls}
+          animate="animate"
           variants={moduleVariants}
           className="relative pb-28">
           <h2 className="mx-auto px-10 md:px-24 text-2xl md:text-3xl mb-6">Completed Work:</h2>
