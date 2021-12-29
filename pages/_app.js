@@ -30,6 +30,7 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     window.addEventListener('load', function () {
+      console.log('loaded')
       setLoading(false);
     })
     return () => window.removeEventListener('load', function () { setLoading(false) })
