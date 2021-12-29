@@ -9,7 +9,7 @@ const About = () => {
 
   return (
     <AnimateOpacity>
-      <section className="flex flex-col-reverse lg:grid lg:grid-cols-2 mx-auto lg:px-28 h-full py-16 lg:pt-28 items-center gap-y-8">
+      <section className="flex flex-col-reverse lg:grid lg:grid-cols-2 mx-auto lg:px-28 pb-16 pt-20 sm:pt-28 items-center gap-y-8">
         <div className="flex flex-col gap-y-5 px-10">
           <div className="font-montserrat text-base xl:text-xl">HI THERE!</div>
           <div className="font-merriweather text-2xl xl:text-3xl">I&apos;m Joanne Duong</div>
