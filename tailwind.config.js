@@ -39,7 +39,6 @@ module.exports = {
         'full': '960px',
       },
       gridTemplateColumns: {
-        'contact': '2fr 1fr',
         'overview': '1fr 1fr 2fr',
         'overview-lg': '1fr 2fr',
         'problemAndSolution-lg' : 'auto auto'

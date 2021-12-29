@@ -10,7 +10,7 @@ import Link from 'next/link'
 import { menuVariants } from '../variants/menu_variants'
 
 function MyApp({ Component, pageProps }) {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const modalRef = useRef();
@@ -27,15 +27,15 @@ function MyApp({ Component, pageProps }) {
     modalRef.current.toggleModal();
   }
 
-  useEffect(() => {
-    window.addEventListener('load', () => {
-      setLoading(false);
-    })
-    console.log('loaded')
-    return () => window.removeEventListener('load', () => {
-      setLoading(false);
-    })
-  }, [])
+  // useEffect(() => {
+  //   window.addEventListener('load', () => {
+  //     setLoading(false);
+  //   })
+  //   console.log('loaded')
+  //   return () => window.removeEventListener('load', () => {
+  //     setLoading(false);
+  //   })
+  // }, [])
 
   useEffect(() => {
     router.events.on("routeChangeError", (e) => setLoading(true));
@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {loading ? <ClipLoader color="#1B3F79" loading={loading} size={30} /> : <div onClick={closeModal}>
+      {loading ? <div className="w-[100vw] h-[100vh] flex items-center justify-center"><ClipLoader color="#1B3F79" loading={loading} size={150} /></div> : <div onClick={closeModal}>
         <Navigation openModal={openModal} toggleModal={toggleModal} />
         <Component {...pageProps} />
         <FooterNavigation />
