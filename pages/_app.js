@@ -11,7 +11,7 @@ import AnimateOpacity from '../components/AnimateOpacity'
 import { menuVariants } from '../variants/variants'
 
 function MyApp({ Component, pageProps }) {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const modalRef = useRef();
@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }) {
   }
 
   useEffect(() => {
+    setLoading(true);
     window.addEventListener('load', function () {
       console.log('loaded')
       setLoading(false);
