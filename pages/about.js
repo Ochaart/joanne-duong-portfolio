@@ -20,7 +20,7 @@ const About = () => {
             In design, I believe in researching users to understand their needs. With my understanding of users and past experiences in retail, I design solutions which achieve business goals.
           </p>
         </div>
-        <div className="relative min-h-[320px] min-w-[320px] md:min-h-[450px] md:min-w-[450px] justify-self-center">
+        <div className="relative min-h-[320px] min-w-[320px] md:min-h-[450px] md:min-w-[450px] xl:min-h-[550px] xl:min-w-[550px] justify-self-center">
           <Image
             src="/joanne_with_bike.png"
             layout="fill"
