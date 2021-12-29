@@ -13,10 +13,10 @@ const About = () => {
         <div className="flex flex-col gap-y-5 px-10">
           <div className="font-montserrat text-base xl:text-xl pt-8 lg:pt-0">HI THERE!</div>
           <div className="font-merriweather text-2xl xl:text-3xl">I&apos;m Joanne Duong</div>
-          <p className="text-base xl:text-xl">
+          <p>
             I&apos;m a product designer based in San Francisco. I&apos;m originally from Seattle, but moved to SF after my first solo trip to Central America. I love traveling the world and bring my global perspective to my work. I get excited about designing which makes life easier so that we have more time to do what’s important: connect in real life.
           </p>
-          <p className="text-base xl:text-xl">
+          <p>
             In design, I believe in researching users to understand their needs. With my understanding of users and past experiences in retail, I design solutions which achieve business goals.
           </p>
         </div>
@@ -48,7 +48,7 @@ const About = () => {
         </div>
         <div className="flex flex-col gap-y-8 lg:px-20">
           <div className="font-merriweather text-2xl xl:text-3xl">In my free time, <span>I enjoy:</span></div>
-          <ul className="flex flex-col gap-y-5 font-openSans text-base xl:text-xl list-disc pl-8">
+          <ul className="flex flex-col gap-y-5 font-openSans list-disc pl-8">
             <li>
               Dancing
             </li>

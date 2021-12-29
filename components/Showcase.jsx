@@ -135,7 +135,7 @@ const Showcase = ({ id, images = [], containerHeight, research, description, tas
         <div className="px-8 mx-auto max-w-[760px] pt-28 pb-6">
           <h3>{task}</h3>
           <h2 className="text-4xl pt-2">{research}</h2>
-          <p className="text-lg pt-3">{description}</p>
+          <p className="pt-3">{description}</p>
         </div>
       )}
       {task ? null : <h2 className="text-2xl pt-5 px-8 text-center">Showcased Design Progression</h2>}
